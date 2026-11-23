@@ -1,49 +1,94 @@
-# Olist E-Commerce Data Engineering Project
+# Olist E-Commerce End-to-End Data Engineering Project
 
 ## Project Overview
-An end-to-end data engineering project using Microsoft Azure, Azure Data Lake Storage Gen2, Azure Synapse Analytics and PySpark to process and analyze Brazilian e-commerce data.
+Developed an end-to-end data engineering pipeline using Microsoft Azure to process and transform Brazilian Olist E-Commerce data.
 
-The project implements the Medallion Architecture (Bronze, Silver and Gold) to transform raw datasets into business-ready analytical datasets.
+The project follows the Medallion Architecture (Bronze, Silver, and Gold) to convert raw datasets into clean, structured, and analytics-ready data.
 
-## Architecture
-- **Bronze Layer:** Stores raw Olist datasets.
-- **Silver Layer:** Cleans, transforms and standardizes data using PySpark.
-- **Gold Layer:** Produces 13 analytical datasets for business reporting.
-
-## Technologies
-- Microsoft Azure Data Lake Storage Gen2
+## Technologies Used
+- Microsoft Azure Data Factory
+- Azure Data Lake Storage Gen2
 - Azure Synapse Analytics
 - Apache Spark
 - PySpark
 - Python
-- Parquet
-- Medallion Architecture
+- GitHub
 
-## Gold Layer Analytics
-1. Category Analysis
-2. Customer Analysis
-3. Delivery Analysis
-4. Delivery Performance
-5. Delivery Summary
-6. Installment Analysis
-7. Monthly Delivery Analysis
-8. Monthly Payment Analysis
-9. Payment Method Analysis
-10. Product Analysis
-11. Revenue Analysis
-12. State Customer Analysis
-13. Top Products
+## Architecture
 
-## Project Objectives
-- Build a cloud-based data lake.
-- Process large datasets using PySpark.
-- Implement Bronze, Silver and Gold data layers.
-- Generate business-focused analytical datasets.
-- Validate data quality and consistency.
+```text
+Olist Raw Dataset
+       |
+       v
+Azure Data Lake Storage
+       |
+       v
+  Bronze Layer
+   (Raw Data)
+       |
+       v
+Azure Synapse + PySpark
+       |
+       v
+  Silver Layer
+ (Cleaned Data)
+       |
+       v
+  Gold Layer
+(Aggregated Data)
+       |
+       v
+Business Analytics
+```
 
-## Project Status
-Core data ingestion, transformation and Gold-layer analytical outputs have been developed. Data quality validation and repository documentation are being finalized.
+## Project Workflow
+
+1. Ingested Olist E-Commerce datasets into Azure Data Lake Storage Gen2.
+2. Organized raw data in the Bronze layer.
+3. Used PySpark in Azure Synapse notebooks for data cleaning and transformation.
+4. Stored processed datasets in the Silver layer.
+5. Created business-oriented analytical datasets in the Gold layer.
+6. Used Azure Data Factory to orchestrate notebook execution.
+
+## Data Analysis
+
+The Gold layer contains analytical datasets covering:
+- Customer Analysis
+- Order Analysis
+- Product Analysis
+- Payment Analysis
+- Delivery Analysis
+- Category Analysis
+- Seller Analysis
+
+## Repository Structure
+
+```text
+Olist-Ecommerce-Data-Engineering/
+│
+├── notebooks/
+│   ├── notebook_1
+│   ├── notebook_2
+│   ├── notebook_3
+│   └── notebook_4
+│
+├── screenshots/
+│
+├── documentation/
+│   └── architecture.md
+│
+└── README.md
+```
+
+## Key Learning Outcomes
+
+- Built an Azure-based data engineering workflow.
+- Implemented Bronze, Silver, and Gold data layers.
+- Performed distributed data transformations using PySpark.
+- Worked with Azure Data Factory pipeline orchestration.
+- Organized analytical outputs in cloud storage.
 
 ## Author
-Karthick Ayyappan  
-M.Sc. Computer Science | Aspiring Data Engineer
+Karthick Ayyappan
+
+M.Sc Computer Science | Aspiring Data Engineer
